@@ -4,9 +4,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const app = express();
 
 app.use('/', createProxyMiddleware({
-  target: 'https://games.crazygames.com',
+  target: 'https://files.crazygames.com',
   changeOrigin: true,
-  pathRewrite: { '^/': '/en_US/ragdoll-archers/' }
+  pathRewrite: { '^/': '/ragdoll-archers/41/' }
 }));
 
 app.listen(3000);
